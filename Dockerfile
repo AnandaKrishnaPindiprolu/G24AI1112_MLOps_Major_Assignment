@@ -5,6 +5,6 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
 COPY src/ src/
-COPY model.joblib ./model.joblib
-
+#COPY src/model.joblib /model.joblib
+COPY src/model.joblib /app/src/model.joblib
 CMD ["python", "src/predict.py"]

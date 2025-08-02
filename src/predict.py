@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 data = fetch_california_housing()
 X, y = data.data, data.target
 
-model = joblib.load("model.joblib")
+model = joblib.load("src/model.joblib")
 preds = model.predict(X)
 
 print(f"Sample Predictions: {preds[:5]}")
